@@ -1,0 +1,7 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"font_face": "JetBrainsMono Nerd Font Mono",
+	"font_size": 14,
+	"side_bar_layout": "commit_graph_as_column",
+}

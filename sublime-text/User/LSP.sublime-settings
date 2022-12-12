@@ -1,0 +1,19 @@
+{
+	"lsp_format_on_save": true,
+	"show_inlay_hints": true,
+	"show_diagnostics_panel_on_save": 0,
+	"clients": {
+		"clangd": {
+			"enabled": true,
+		},
+		"rust-analyzer": {
+			"settings": {
+				"rust-analyzer.inlayHints.enable": true,
+			},
+			"command": [
+				"~/.cargo/bin/rust-analyzer",
+			],
+			"enabled": true,
+		},
+	},
+}

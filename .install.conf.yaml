@@ -1,0 +1,60 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.agignore:
+    ~/.aria2/aria2.conf:
+    ~/.axelrc:
+    ~/.bash:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.dotfiles: ''
+    ~/.gdbinit:
+    ~/.gitconfig:
+    ~/.cgdb:
+    ~/.gitignore_global:
+    ~/.haskeline:
+    ~/.hgrc:
+    ~/.inputrc:
+    ~/.ipython/profile_default/ipython_config.py: ipython/ipython_config.py
+    ~/.ipython/profile_default/ipython_kernel_config.py: ipython/ipython_kernel_config.py
+    ~/.ipython/profile_default/startup/disable_warnings.py: ipython/disable_warnings.py
+    ~/.pythonrc:
+    ~/.rtorrent.rc:
+    ~/.shell:
+    ~/.config/tmux: tmux
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.vimrc: vimrc
+    ~/.config/lazygit: lazygit
+    ~/.config/nvim: nvim
+    ~/.config/nvim/lua/user/init.lua: astro_nvim_user.lua
+    ~/.config/helix: helix 
+    ~/.config/zellij: zellij
+    ~/.config/alacritty: alacritty 
+    ~/.config/sublime-text: sublime-text
+    ~/.config/sublime-merge: sublime-merge
+    ~/.vimrc_local:
+    ~/.ideavimrc:
+    ~/.vsvimrc: vscode/vsvimrc
+    ~/.zsh:
+    ~/.zshrc: zshrc_local
+    ~/.shell_local_before:
+    # ~/.zfunctions/prompt_spaceship_setup: zsh/prompt/spaceship-prompt/spaceship.zsh
+
+- create:
+  - ~/.rtorrent/session
+  - ~/.rtorrent/watch
+  - ~/.rtorrent/downloads
+
+- shell:
+  - git submodule sync --recursive
+  # the following have to run after linking ~/.gitconfig
+  - git update-submodules
+  - >
+    git cleanall -f
+    shell/plugins/
+    zsh/plugins/

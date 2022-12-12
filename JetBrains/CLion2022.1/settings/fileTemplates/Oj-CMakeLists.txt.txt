@@ -1,0 +1,14 @@
+file(GLOB_RECURSE files "./*.cpp")
+foreach (file \${files})
+    # Get current directory name
+    file(RELATIVE_PATH dir "\${CMAKE_CURRENT_SOURCE_DIR}" \${file})
+    get_filename_component(dir \${dir} PATH)
+
+    # Get file name
+    get_filename_component(name \${file} NAME_WE)
+
+    # Create target
+    set(name  "${prefix}-\${dir}-\${name}")
+    message("-- [target]: \${name}")
+    add_executable(\${name} \${file})
+endforeach ()

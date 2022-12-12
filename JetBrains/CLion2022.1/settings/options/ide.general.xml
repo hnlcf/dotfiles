@@ -1,0 +1,17 @@
+<application>
+  <component name="GeneralSettings">
+    <option name="confirmOpenNewProject2" value="0" />
+    <option name="defaultProjectDirectory" value="$USER_HOME$/workspace/cxx/personal" />
+    <option name="showTipsOnStartup" value="false" />
+  </component>
+  <component name="StatusBar">
+    <option name="widgets">
+      <map>
+        <entry key="CwmWireStatsWidgetFactory" value="false" />
+        <entry key="FlowJSInfo" value="false" />
+        <entry key="TypeScriptInfo" value="false" />
+        <entry key="webDeployment.default.server.widget" value="false" />
+      </map>
+    </option>
+  </component>
+</application>

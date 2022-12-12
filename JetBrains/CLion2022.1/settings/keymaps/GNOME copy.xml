@@ -1,0 +1,8 @@
+<keymap version="1" name="GNOME copy" parent="Default for GNOME">
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="alt comma" />
+  </action>
+  <action id="RunAnything">
+    <keyboard-shortcut first-keystroke="alt l" />
+  </action>
+</keymap>
