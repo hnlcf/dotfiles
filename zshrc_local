@@ -80,6 +80,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias cl='clear'
 alias vi='nvim'
 alias hx='helix'
+alias zj='zellij'
 alias sl="subl"
 alias sm="smerge"
 alias gl="git clone"
@@ -102,5 +103,3 @@ eval "$(zoxide init zsh)"
 
 # starship
 # eval "$(starship init zsh)"
-
-eval "$(zellij setup --generate-auto-start zsh)"

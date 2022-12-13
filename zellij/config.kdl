@@ -288,22 +288,22 @@ default_shell "zsh"
 //   - true (default)
 //   - false
 //
-pane_frames false
+pane_frames true
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "gruvbox-dark" 
+theme "one-half-dark" 
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-default_layout "default"
+// default_layout "code1"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
 //
-default_mode "locked"
+default_mode "normal"
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
