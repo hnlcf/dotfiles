@@ -65,6 +65,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.ghcup/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/Applications/lua-lsp/bin"
 export PATH="$PATH:$HOME/Applications/anaconda3/bin"
 export PATH="$PATH:$HOME/Applications/qemu-7.1.0/build"
 
@@ -102,3 +103,4 @@ eval "$(zoxide init zsh)"
 # starship
 # eval "$(starship init zsh)"
 
+eval "$(zellij setup --generate-auto-start zsh)"
