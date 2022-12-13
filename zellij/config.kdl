@@ -276,12 +276,12 @@ keybinds clear-defaults=true {
 //   - true
 //   - false (Default)
 //
-// simplified_ui true
+simplified_ui false
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-// default_shell "fish"
+default_shell "zsh"
 
 // Toggle between having pane frames around the panes
 // Options:
@@ -293,17 +293,17 @@ pane_frames false
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "gruvbox" 
+theme "gruvbox-dark" 
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact"
+default_layout "default"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
 //
-// default_mode "locked"
+default_mode "locked"
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
@@ -349,7 +349,7 @@ theme "gruvbox"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/usr/bin/vim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -360,11 +360,11 @@ theme "gruvbox"
 
 // The folder in which Zellij will look for layouts
 //
-// layout_dir /path/to/my/layout_dir
+layout_dir "/home/changfeng/.config/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 //
-// theme_dir "/path/to/my/theme_dir"
+theme_dir "/home/changfeng/.config/zellij/themes"
 
 plugins {
     tab-bar { path "tab-bar"; }

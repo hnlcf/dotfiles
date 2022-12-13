@@ -1,0 +1,7 @@
+layout {
+    tab name="main" focus=true split_direction="vertical" {
+        pane
+        pane
+    }
+}
+
