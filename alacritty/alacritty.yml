@@ -124,7 +124,7 @@ window:
 
   startup_mode: Maximized
 
-  opacity: 1.0
+  opacity: 0.80
   # selection:
   save_to_clipboard: true
   live_config_reload: true
@@ -133,7 +133,7 @@ key_bindings:
   - { key: C, mods: Control|Shift, action: Copy }
 
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
-  - { key: Q, mods: Control, action: Quit }
+  - { key: Q, mods: Control|Shift, action: Quit }
 
   - { key: Key0, mods: Control, action: ResetFontSize }
   - { key: Equals, mods: Control, action: IncreaseFontSize }
