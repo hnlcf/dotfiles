@@ -9,34 +9,49 @@ return {
   --
   -- Theme/Colorscheme
   --
-  colorscheme = "default_theme", -- sonokai, gruvbox
+  colorscheme = "gruvbox", -- sonokai, gruvbox
 
   -- 
   -- Add highlight groups in any theme
   --
   highlights = { 
-    -- init = { -- this table overrides highlights in all themes
-    --   Normal = { bg = "NONE" },
-    -- }
+    init = { -- this table overrides highlights in all themes
+      -- set the transparency for all of these highlight groups
+      Normal = { bg = "NONE", ctermbg = "NONE" },
+      NormalNC = { bg = "NONE", ctermbg = "NONE" },
+      CursorColumn = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
+      CursorLine = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
+      CursorLineNr = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
+      LineNr = {},
+      SignColumn = {},
+      StatusLine = {},
+      NeoTreeNormal = { bg = "NONE", ctermbg = "NONE" },
+      NeoTreeNormalNC = { bg = "NONE", ctermbg = "NONE" },
+    },
+    gruvbox = {
+      StatusLine = { fg = "#ebdbb2", bg = "#504945" },
+    },
   },
   
   --
   -- Default theme configuration
   --
   -- default_theme = { },
-  default_theme = {
-    highlights = function(hi)
-      local C = require "default_theme.colors"
-      hi.Normal = {bg = C.none, ctermbg = C.none}
-      hi.CursorColumn = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
-      hi.CursorLine = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
-      hi.CursorLineNr = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
-      hi.LineNr = {}
-      hi.SignColumn = {}
-      hi.StatusLine = {}
-      return hi
-    end,
-  },
+  -- default_theme = {
+  --   highlights = function(hi)
+  --     local C = require "default_theme.colors"
+  --     hi.Normal = {bg = C.none, ctermbg = C.none}
+  --     hi.CursorColumn = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
+  --     hi.CursorLine = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
+  --     hi.CursorLineNr = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
+  --     hi.LineNr = {}
+  --     hi.SignColumn = {}
+  --     hi.StatusLine = {}
+  --     hi.NeoTreeNormal = {bg = C.none, ctermbg = C.none}
+  --     hi.NeoTreeNormalNC = {bg = C.none, ctermbg = C.none}
+  --     return hi
+  --   end,
+  -- },
 
   --
   -- Basic Options
@@ -128,7 +143,7 @@ return {
       { "sainnhe/sonokai" },
 
       -- gruvbox colorscheme
-      { "morhetz/gruvbox" },
+      { "ellisonleao/gruvbox.nvim" },
 
       -- clangd extensions
       {

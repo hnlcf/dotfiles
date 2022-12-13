@@ -6,63 +6,63 @@
 colors:
   # Default colors
   primary:
-    background: "#1e2127"
-    foreground: "#abb2bf"
+    background: "#282828"
+    foreground: "#d5c4a1"
 
       # Normal colors
       # Nord
   normal:
-    black:   "#1e2127"
-    red:     "#e06c75"
-    green:   "#98c379"
-    yellow:  "#d19a66"
-    blue:    "#61afef"
-    magenta: "#c678dd"
-    cyan:    "#56b6c2"
-    white:   "#828791"
+    black:   "#282828"
+    red:     "#cc241d"
+    green:   "#98971a"
+    yellow:  "#d79921"
+    blue:    "#458588"
+    magenta: "#b16286"
+    cyan:    "#689d6a"
+    white:   "#fbf1c7"
 
       # Bright colors
   bright:
     black:   "#5c6370"
-    red:     "#e06c75"
-    green:   "#98c379"
-    yellow:  "#d19a66"
-    blue:    "#61afef"
-    magenta: "#c678dd"
-    cyan:    "#56b6c2"
+    red:     "#cc241d"
+    green:   "#98971a"
+    yellow:  "#d79921"
+    blue:    "#458588"
+    magenta: "#b16286"
+    cyan:    "#689d6a"
     white:   "#e6efff"
 
   dim:
-    black:   "#1e2127"
-    red:     "#e06c75"
-    green:   "#98c379"
-    yellow:  "#d19a66"
-    blue:    "#61afef"
-    magenta: "#c678dd"
-    cyan:    "#56b6c2"
-    white:   "#828791"
+    black:   "#282828"
+    red:     "#cc241d"
+    green:   "#98971a"
+    yellow:  "#d79921"
+    blue:    "#458588"
+    magenta: "#b16286"
+    cyan:    "#689d6a"
+    white:   "#fbf1c7"
 
 
 #   normal:
 #     black: "#4b5263"
-#     red: "#e06c75"
-#     green: "#98C379"
+#     red: "#cc241d"
+#     green: "#98971a"
 #     yellow: "#E5C07B"
-#     blue: "#61AFEF"
-#     magenta: "#C678DD"
-#     cyan: "#56B6C2"
-#     white: "#abb2bf"
+#     blue: "#458588"
+#     magenta: "#b16286"
+#     cyan: "#689d6a"
+#     white: "#d5c4a1"
 # 
 #   # Bright colors
 #   bright:
 #     black: "#4b5263"
-#     red: "#e06c75"
-#     green: "#98C379"
+#     red: "#cc241d"
+#     green: "#98971a"
 #     yellow: "#E5C07B"
-#     blue: "#61AFEF"
-#     magenta: "#C678DD"
-#     cyan: "#56B6C2"
-#     white: "#abb2bf"
+#     blue: "#458588"
+#     magenta: "#b16286"
+#     cyan: "#689d6a"
+#     white: "#d5c4a1"
 
 
   # Change cursor colors
