@@ -9,7 +9,7 @@ return {
   --
   -- Theme/Colorscheme
   --
-  colorscheme = "default_theme", -- sonokai
+  colorscheme = "default_theme", -- sonokai, gruvbox
 
   -- 
   -- Add highlight groups in any theme
@@ -23,14 +23,30 @@ return {
   --
   -- Default theme configuration
   --
-  default_theme = { },
+  -- default_theme = { },
+  default_theme = {
+    highlights = function(hi)
+      local C = require "default_theme.colors"
+      hi.Normal = {bg = C.none, ctermbg = C.none}
+      hi.CursorColumn = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
+      hi.CursorLine = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
+      hi.CursorLineNr = {cterm = {}, ctermbg = C.none, ctermfg = C.none}
+      hi.LineNr = {}
+      hi.SignColumn = {}
+      hi.StatusLine = {}
+      return hi
+    end,
+  },
 
   --
   -- Basic Options
   --
   options = {
+    opt = {
+      background = dark,
+    },
     g = {
-      sonokai_style = "default"
+      sonokai_style = "espresso"
     }
   },
 
@@ -110,6 +126,9 @@ return {
     init = {
       -- sonokai colorscheme
       { "sainnhe/sonokai" },
+
+      -- gruvbox colorscheme
+      { "morhetz/gruvbox" },
 
       -- clangd extensions
       {
