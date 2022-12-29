@@ -11,7 +11,7 @@ set history save on
 set debuginfod enabled on
 
 # 开启log
-set logging file ./gdb.log
+set logging file ./.gdb.log
 set logging enabled on
 
  set auto-load safe-path /
@@ -20,7 +20,7 @@ set logging enabled on
 # set startup-with-shell off
 # 退出gdb quit
 define hook-quit
-    shell rm .bps.txt
-    save breakpoints .bps.txt
+    shell rm .gdb.bps
+    save breakpoints .gdb.bps
     set confirm off
 end
