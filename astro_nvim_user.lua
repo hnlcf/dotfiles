@@ -9,7 +9,7 @@ return {
   --
   -- Theme/Colorscheme
   --
-  colorscheme = "gruvbox", -- sonokai, gruvbox
+  colorscheme = "sonokai", -- sonokai, gruvbox
 
   -- 
   -- Add highlight groups in any theme
@@ -28,9 +28,9 @@ return {
       NeoTreeNormal = { bg = "NONE", ctermbg = "NONE" },
       NeoTreeNormalNC = { bg = "NONE", ctermbg = "NONE" },
     },
-    gruvbox = {
-      StatusLine = { fg = "#ebdbb2", bg = "#504945" },
-    },
+    -- gruvbox = {
+    --   StatusLine = { fg = "#ebdbb2", bg = "#504945" },
+    -- },
   },
   
   --
@@ -61,8 +61,16 @@ return {
       background = dark,
     },
     g = {
-      sonokai_style = "espresso"
+      sonokai_style = "atlantis"
     }
+  },
+
+  --
+  -- Diagnostics
+  --
+  diagnostics = {
+    virtual_text = true,
+    underline = true,
   },
 
   --

@@ -3,72 +3,36 @@
 # Others: $HOME/.config/alacritty/alacritty.yml
 # Colors (One Darker)
 # Note I am using alacritty-ligatures until ligatures make it upstream
+
+
+# Colors (One Dark)
 colors:
   # Default colors
   primary:
-    background: "#282828"
-    foreground: "#d5c4a1"
+    background: '#1e2127'
+    foreground: '#abb2bf'
 
-      # Normal colors
-      # Nord
+  # Normal colors
   normal:
-    black:   "#282828"
-    red:     "#cc241d"
-    green:   "#98971a"
-    yellow:  "#d79921"
-    blue:    "#458588"
-    magenta: "#b16286"
-    cyan:    "#689d6a"
-    white:   "#fbf1c7"
+    black:   '#1e2127'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#d19a66'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
 
-      # Bright colors
+  # Bright colors
   bright:
-    black:   "#5c6370"
-    red:     "#cc241d"
-    green:   "#98971a"
-    yellow:  "#d79921"
-    blue:    "#458588"
-    magenta: "#b16286"
-    cyan:    "#689d6a"
-    white:   "#e6efff"
-
-  dim:
-    black:   "#282828"
-    red:     "#cc241d"
-    green:   "#98971a"
-    yellow:  "#d79921"
-    blue:    "#458588"
-    magenta: "#b16286"
-    cyan:    "#689d6a"
-    white:   "#fbf1c7"
-
-
-#   normal:
-#     black: "#4b5263"
-#     red: "#cc241d"
-#     green: "#98971a"
-#     yellow: "#E5C07B"
-#     blue: "#458588"
-#     magenta: "#b16286"
-#     cyan: "#689d6a"
-#     white: "#d5c4a1"
-# 
-#   # Bright colors
-#   bright:
-#     black: "#4b5263"
-#     red: "#cc241d"
-#     green: "#98971a"
-#     yellow: "#E5C07B"
-#     blue: "#458588"
-#     magenta: "#b16286"
-#     cyan: "#689d6a"
-#     white: "#d5c4a1"
-
-
-  # Change cursor colors
-  cursor:
-    text: "#3B4252"
-    cursor: "#ECEFF4"
+    black:   '#5c6370'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#d19a66'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#ffffff'
 
 cursor:
   style:
@@ -93,7 +57,7 @@ font:
   #   # Style can be specified to pick a specific face.
     style: Italic
 
-  size: 14.0
+  size: 16.0
 
   ligatures: true
 
@@ -124,7 +88,7 @@ window:
 
   startup_mode: Maximized
 
-  opacity: 0.80
+  opacity: 0.8
   # selection:
   save_to_clipboard: true
   live_config_reload: true
