@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "sonokai"
 
 [editor]
 scrolloff = 5

@@ -15,19 +15,19 @@ return {
   -- Add highlight groups in any theme
   --
   highlights = { 
-    init = { -- this table overrides highlights in all themes
-      -- set the transparency for all of these highlight groups
-      Normal = { bg = "NONE", ctermbg = "NONE" },
-      NormalNC = { bg = "NONE", ctermbg = "NONE" },
-      CursorColumn = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
-      CursorLine = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
-      CursorLineNr = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
-      LineNr = {},
-      SignColumn = {},
-      StatusLine = {},
-      NeoTreeNormal = { bg = "NONE", ctermbg = "NONE" },
-      NeoTreeNormalNC = { bg = "NONE", ctermbg = "NONE" },
-    },
+    -- init = { -- this table overrides highlights in all themes
+    --   -- set the transparency for all of these highlight groups
+    --   Normal = { bg = "NONE", ctermbg = "NONE" },
+    --   NormalNC = { bg = "NONE", ctermbg = "NONE" },
+    --   CursorColumn = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
+    --   CursorLine = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
+    --   CursorLineNr = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
+    --   LineNr = {},
+    --   SignColumn = {},
+    --   StatusLine = {},
+    --   NeoTreeNormal = { bg = "NONE", ctermbg = "NONE" },
+    --   NeoTreeNormalNC = { bg = "NONE", ctermbg = "NONE" },
+    -- },
     -- gruvbox = {
     --   StatusLine = { fg = "#ebdbb2", bg = "#504945" },
     -- },
