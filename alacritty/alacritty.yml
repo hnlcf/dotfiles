@@ -88,7 +88,7 @@ window:
 
   startup_mode: Maximized
 
-  opacity: 0.8
+  opacity: 1.0
   # selection:
   save_to_clipboard: true
   live_config_reload: true
