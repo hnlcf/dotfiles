@@ -33,6 +33,7 @@
     ~/.config/nvim: nvim
     ~/.config/nvim/lua/user/init.lua: astro_nvim_user.lua
     ~/.config/helix: helix 
+    ~/.config/bottom: bottom
     ~/.config/zellij: zellij
     ~/.config/alacritty: alacritty 
     ~/.config/sublime-text: sublime-text
