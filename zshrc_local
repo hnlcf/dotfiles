@@ -85,10 +85,10 @@ alias zj='zellij'
 alias sl="subl"
 alias sm="smerge"
 alias gl="git clone"
-alias ls="exa"
-alias ll="exa --long"
-alias la="exa --all --long"
-alias bat="bat --theme Dracula"
+alias ls="exa --icons --group-directories-first"
+alias ll="exa --long --icons --group-directories-first"
+alias la="exa --all --long --icons --group-directories-first"
+alias bat="bat --paging=never --style=plain --theme=gruvbox-dark"
 alias proxy="sudo pigchacli"
 alias proxy-st="pigchacli --status"
 alias kproxy="sudo pigchacli --stop"
@@ -103,4 +103,4 @@ alias mv='mv -i'
 eval "$(zoxide init zsh)"
 
 # starship
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
