@@ -150,7 +150,7 @@ nnoremap <leader>h :action HideAllWindows<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
 
 " Switch view mode"
-nnoremap <c-z> :action ToggleZenMode<CR>
+nnoremap <c-z> :action ToggleFullScreen<CR>
 
 if &ide =~? 'intellij idea'
 elseif &ide =~? 'clion'

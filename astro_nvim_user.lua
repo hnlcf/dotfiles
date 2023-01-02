@@ -11,10 +11,10 @@ return {
   --
   colorscheme = "sonokai", -- sonokai, gruvbox
 
-  -- 
+  --
   -- Add highlight groups in any theme
   --
-  highlights = { 
+  highlights = {
     -- init = { -- this table overrides highlights in all themes
     --   -- set the transparency for all of these highlight groups
     --   Normal = { bg = "NONE", ctermbg = "NONE" },
@@ -32,7 +32,7 @@ return {
     --   StatusLine = { fg = "#ebdbb2", bg = "#504945" },
     -- },
   },
-  
+
   --
   -- Default theme configuration
   --
@@ -84,15 +84,16 @@ return {
 
     -- add lsp servers local installed
     servers = {
-      "pyright", -- Python
       "clangd", -- C/C++
-      "rust_analyzer", -- Rust
       "marksman", -- markdown
+      "ocamllsp", -- OCaml
+      "pyright", -- Python
+      "rust_analyzer", -- Rust
       "texlab", -- latex
     },
 
     -- skip default setup for lsp servers with extension
-    skip_setup = { "clangd", "rust_analyzer" }, -- skip lsp setup because rust-tools will do it itself
+    -- skip_setup = { "clangd", "rust_analyzer" }, -- skip lsp setup because rust-tools will do it itself
 
     -- config lsp server settings
     ["server-settings"] = {
