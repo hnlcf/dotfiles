@@ -20,3 +20,6 @@
 [submodule "tmux/tpm"]
 	path = tmux/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/AstroNvim/AstroNvim.git
