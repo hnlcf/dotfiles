@@ -1,0 +1,8 @@
+<templateSet group="CMake">
+  <template name="oj" value="&#10;file(GLOB_RECURSE files &quot;./*.cpp&quot;)&#10;foreach (file ${files})&#10;    # Get current directory name&#10;    file(RELATIVE_PATH dir &quot;${CMAKE_CURRENT_SOURCE_DIR}&quot; ${file})&#10;    get_filename_component(dir ${dir} PATH)&#10;&#10;    # Get file name&#10;    get_filename_component(name ${file} NAME_WE)&#10;&#10;    # Create target&#10;    set(name  &quot;$PREFIX$-${dir}-${name}&quot;)&#10;    message(&quot;-- [target]: ${name}&quot;)&#10;    add_executable(${name} ${file})&#10;endforeach ()&#10;" description="Traverse and create target for per source file" toReformat="false" toShortenFQNames="true">
+    <variable name="PREFIX" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CMAKE" value="true" />
+    </context>
+  </template>
+</templateSet>

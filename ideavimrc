@@ -1,0 +1,171 @@
+" 显示当前模式
+set showmode
+" 共享系统粘贴板
+set clipboard+=unnamed
+" 打开行号
+set number
+" 打开相对行号
+set relativenumber
+" 设置命令历史记录条数
+set history=2000
+" 关闭兼容vi
+set nocompatible
+" 开启语法高亮功能
+syntax enable
+" 允许用指定语法高亮配色方案替换默认方案
+syntax on
+" 模式搜索实时预览,增量搜索
+set incsearch
+" 设置搜索高亮
+set hlsearch
+" 忽略大小写 (该命令配合smartcase使用较好，否则不要开启)
+set ignorecase
+" 模式查找时智能忽略大小写
+set smartcase
+" vim自身命令行模式智能补全
+set wildmenu
+" 总是显示状态栏
+set laststatus=2
+" 显示光标当前位置
+set ruler
+
+" set scrolloff=8
+" 高亮显示当前行/列
+set cursorline
+"set cursorcolumn
+" 禁止折行
+set nowrap
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数
+set tabstop=8
+" 设置格式化时制表符占用空格数
+set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+set softtabstop=4
+" 基于缩进或语法进行代码折叠
+set foldmethod=indent
+set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+
+" ---------------
+" --- Key map ---
+" ---------------
+
+" Set leader key
+let mapleader=";"
+
+" No search highlight
+nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+
+" Switch buffer
+nnoremap <silent> [b :w<CR>:bprevious<CR>
+nnoremap <silent> ]b :w<CR>:bnext<CR>
+
+" Jump to start and end of line
+map H ^
+map L $
+
+" Jump to other windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+nnoremap K 5k
+nnoremap J 5j
+
+" --- Use Idea Actions ---
+
+" Edit and reload ideavimrc
+nnoremap <leader>e :e ~/.ideavimrc<CR>
+nnoremap <leader>r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Browser methods up dna down
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+" Move code up and down
+inoremap <c-j> <Esc>:action MoveStatementDown<CR>i
+inoremap <c-k> <Esc>:action MoveStatementUp<CR>i
+
+vnoremap J :action MoveStatementDown<CR>
+vnoremap K :action MoveStatementUp<CR>
+
+" "
+inoremap <c-l> <Esc>:action EditorCompleteStatement<CR>
+
+" Reload CMake project"
+nnoremap <leader>m :action CMake.ReloadCMakeProject<CR>
+nnoremap <Space>km :action CMake.ReloadCMakeProject<CR>
+
+" Run"
+nnoremap <Space>kr :action Run<CR>
+nnoremap <Space>kn :action ContextRun<CR>
+nnoremap <Space>kc :action RunClass<CR>
+nnoremap <Space>kf :action RerunFailedTests<CR>
+
+nnoremap <leader>c :action ChooseRunConfiguration<CR>
+nnoremap <leader>d :action ChooseDebugConfiguration<CR>
+
+" Show file structure, rename, format and find"
+nnoremap <Space>r :action RenameElement<CR>
+nnoremap <Space>e :action ReformatCode<CR>
+nnoremap <Space>u :action FindUsages<CR>
+
+nnoremap <leader>f :action FindInPath<CR>
+nnoremap <leader>s :action FileStructurePopup<CR>
+
+" Goto"
+nnoremap <Space>a :action GotoAction<CR>
+nnoremap <Space>f :action GotoFile<CR>
+nnoremap <Space>w :action GotoNextError<CR>
+nnoremap <Space>b :action GotoPreviousError<CR>
+
+nnoremap gc :action GotoClass<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gI :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+
+" Refactor
+nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
+vnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Space>n :action Inline<CR>
+vnoremap <Space>n :action Inline<CR>
+nnoremap <Space>m :action ExtractMethod<CR>
+vnoremap <Space>m :action ExtractMethod<CR>
+nnoremap <Space>v :action IntroduceVariable<CR>
+vnoremap <Space>v :action IntroduceVariable<CR>
+nnoremap <Space>i :action ShowIntentionActions<CR>
+
+" Toggle ang hide window"
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>q :action HideActiveWindow<CR>
+nnoremap <leader>h :action HideAllWindows<CR>
+
+" Show files in current dir"
+" nnoremap <leader>n :action ContextRun<CR>
+nnoremap <leader>b :action ShowNavBar<CR>
+
+" Switch view mode"
+nnoremap <c-z> :action ToggleFullScreen<CR>
+
+if &ide =~? 'intellij idea'
+elseif &ide =~? 'clion'
+nnoremap <Space>v :action CIDR.Lang.IntroduceVariable<CR>
+elseif &ide =~? 'android studio'
+nnoremap <Space>kn :action RunContextGroup<CR>
+nnoremap <leader>n :action RunContextGroup<CR>
+endif
+
+set clipboard+=ideaput
+
+set keep-english-in-normal
+" comment plugin
+set commentary
+" surround plugin
+set surround
+" easymotion
+set easymotion

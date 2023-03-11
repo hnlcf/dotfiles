@@ -1,0 +1,33 @@
+layout {
+    tab_template name="full_tab" {
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+    }
+    full_tab name="Local" {
+        pane split_direction="vertical" {
+            pane borderless=true focus=true
+            pane borderless=true size="30%"
+        }
+    }
+    full_tab name="Editor" cwd="/home/changfeng/workspace/shuimu" {
+        pane borderless=true size="70%" focus=true 
+        pane 
+    }
+    full_tab name="Terminal" cwd="/home/changfeng/workspace/shuimu" {
+        pane 
+    }
+    full_tab name="Remote" {
+        pane split_direction="vertical" {
+            pane borderless=true focus=true
+            pane borderless=true size="30%"
+        }
+    }
+    full_tab name="Performance" {
+        pane borderless=true focus=true {
+            command "btop"
+        }
+    }
+}
+

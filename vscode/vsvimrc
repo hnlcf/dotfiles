@@ -1,0 +1,32 @@
+" 设置前导键
+let mapleader=";"
+
+" 暂时取消搜索高亮快捷键
+nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+
+" 定义快捷键到行首和行尾
+map H ^
+map L $
+" 定义快速跳转
+nmap <Leader>t <C-]>
+" 定义快速跳转回退
+nmap <Leader>T <C-t>
+" 标签页后退 ---标签页前进是gt
+nmap R gt
+nmap E gT
+
+" 文件操作相关
+" 定义快捷键关闭当前分割窗口
+nmap <Leader>q :q<CR>
+" 定义快捷键保存当前窗口内容
+nmap <Leader>w :w<CR>
+
+" Focus center or current cursor position after \"J\"
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+" nnoremap j jzz
+" nnoremap k kzz
+
+" map esc to jk in insert mode
+inoremap jk <ESC>

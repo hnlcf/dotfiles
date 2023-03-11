@@ -1,0 +1,9 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <extensionMap>
+      <mapping ext="srcjar" type="ARCHIVE" />
+      <mapping ext="clang-format" type="YAML" />
+      <mapping ext="" type="YAML" />
+    </extensionMap>
+  </component>
+</application>

@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"http_proxy": "127.0.0.1:15777",
+	"https_proxy": "127.0.0.1:15777",
+	"in_process_packages": [
+	],
+	"installed_packages": [
+		"A File Icon",
+		"Elixir",
+		"LSP",
+		"LSP-elixir",
+		"LSP-json",
+		"LSP-pyright",
+		"LSP-rust-analyzer",
+		"LSP-TexLab",
+		"Package Control",
+		"Rust Enhanced",
+		"Terminal",
+		"Terminus",
+		"Theme - Monokai Pro",
+		"TOML",
+	],
+}

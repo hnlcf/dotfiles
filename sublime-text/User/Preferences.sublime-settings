@@ -1,0 +1,28 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"theme": "Default Dark.sublime-theme",
+	"hardware_acceleration": "opengl",
+	"font_face": "IosevkaTerm Nerd Font Mono",
+	"font_size": 16,
+	"line_padding_top": 5,
+	"line_padding_bottom": 5,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"scroll_context_lines": 5,
+	"folder_exclude_patterns": [
+		".cache",
+		".idea",
+		".vscode",
+		".git",
+		".svn",
+		".hg"
+	],
+	"relative_line_numbers": true,
+	"vintage_start_in_command_mode": true,
+	"vintage_use_clipboard": true,
+	"ignored_packages": [
+		"Rust",
+	],
+}

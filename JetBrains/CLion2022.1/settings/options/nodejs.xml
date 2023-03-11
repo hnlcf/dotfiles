@@ -1,0 +1,6 @@
+<application>
+  <component name="NodeJsLocalInterpreterManager">
+    <local-interpreter path="/usr/bin/node" />
+    <local-interpreter path="$USER_HOME$/.nvm/versions/node/v16.16.0/bin/node" />
+  </component>
+</application>

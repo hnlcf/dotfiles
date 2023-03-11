@@ -1,0 +1,62 @@
+
+right_format = """
+$localip\
+$cmd_duration\
+$time
+"""
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+vicmd_symbol = '[V](bold green) '
+
+
+[username]
+style_user = 'yellow'
+style_root = 'white bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue) @(bold white) [$hostname](bold yellow) '
+trim_at = '.companyname.com'
+disabled = true
+
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = true
+
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+disabled = false
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = ' '
+format = 'in [${ram}]($style)'
+style = 'bold cyan'
+
+
+[localip]
+ssh_only = false
+format = 'in [$localipv4](purple) '
+disabled = true
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration](#689d6a) '
+disabled = true
+
+[time]
+disabled = true
+format = 'at [$time](blue) '
+time_format = '%T'
+utc_time_offset = '+8'
+

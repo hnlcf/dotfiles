@@ -1,0 +1,23 @@
+
+layout {
+    tab_template name="full_tab" {
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+    }
+    full_tab name="System" {
+        pane
+    }
+    full_tab name="Editor" cwd="/home/changfeng/workspace" {
+            pane size="70%" focus=true 
+            pane 
+    }
+    full_tab name="Terminal" {
+        pane split_direction="vertical" {
+            pane borderless=true focus=true
+            pane borderless=true size="30%"
+        }
+    }
+}
+

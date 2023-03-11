@@ -1,0 +1,563 @@
+{
+  "http.proxy": "http://127.0.0.1:15777",
+  "window.zoomLevel": 1,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.copyOnSelection": true,
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "vscode-icons",
+  "keyboard.dispatch": "keyCode",
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.fontSize": 18,
+  "editor.fontFamily": "IosevkaTerm Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.mouseWheelZoom": true,
+  "editor.lineHeight": 1.6,
+  "editor.indentSize": "tabSize",
+  "editor.inlayHints.fontSize": 18,
+  "editor.inlayHints.fontFamily": "IosevkaTerm Nerd Font Mono",
+  "editor.codeLensFontFamily": "IosevkaTerm Nerd Font Mono",
+  "editor.formatOnSave": true,
+  "editor.smoothScrolling": true,
+  "editor.scrollBeyondLastColumn": 5,
+  "editor.linkedEditing": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.cursorSurroundingLines": 5,
+  "explorer.confirmDelete": false,
+  "debug.console.fontSize": 18,
+  "debug.console.fontFamily": "IosevkaTerm Nerd Font Mono",
+  "debug.allowBreakpointsEverywhere": true,
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontFamily": "IosevkaTerm Nerd Font Mono",
+  "terminal.integrated.lineHeight": 1.1,
+  "cmake.buildTask": true,
+  "cmake.configureOnOpen": true,
+  "cmake.generator": "Unix Makefiles",
+  "git.confirmSync": false,
+  "gitlens.defaultDateFormat": null,
+  "gitlens.defaultDateShortFormat": null,
+  "gitlens.defaultTimeFormat": null,
+  "C_Cpp.clang_format_fallbackStyle": "Mozilla",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "clangd.arguments": [
+    "--header-insertion=never"
+  ],
+  "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+  "rust-analyzer.imports.prefix": "self",
+  "rust-analyzer.restartServerOnConfigChange": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "rust-analyzer.debug.openDebugPane": true,
+  "rust-analyzer.lru.capacity": 1024,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown.preview.fontFamily": "IosevkaTerm Nerd Font Mono",
+  "markdown.preview.lineHeight": 1.8,
+  "markdownlint.config": {
+    "MD014": false,
+  },
+  "files.exclude": {
+    "*.sublime-project": true,
+    "*.sublime-workspace": true,
+    "**/_build": true,
+    "**/_opam": true,
+    "**/.cache": true,
+    "**/.elixir_ls": true,
+    "**/.idea": true
+  },
+  "redhat.telemetry.enabled": true,
+  "notebook.outputFontFamily": "IosevkaTerm Nerd Font Mono",
+  "notebook.outputLineHeight": 18,
+  "scm.inputFontFamily": "IosevkaTerm Nerd Font Mono",
+  "scm.inputFontSize": 16,
+  "errorLens.fontFamily": "IosevkaTerm Nerd Font Mono",
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info",
+    "hint"
+  ],
+  ////////////////////////////////////////// VIM ////////////////////////////////////////////////
+  "vim.useCtrlKeys": true,
+  "vim.smartRelativeLine": true,
+  "vim.scroll": 8,
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.insert": "line",
+  /* insert 模式 */
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<Right>"
+      ]
+    }, // 右移一位
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<left>"
+      ]
+    }, // 左移一位
+  ],
+  /* normal 模式 */
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-U>"
+      ]
+    }, // 快速移动
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-d>"
+      ]
+    }, // 快速移动
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [
+        ":",
+        "w",
+        "<Cr>"
+      ]
+    }, // 快速保存
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "after": [
+        ":",
+        "w",
+        "q",
+        "<Cr>"
+      ]
+    }, // 快速关闭
+    {
+      "before": [
+        "U"
+      ],
+      "after": [
+        "<C-r>"
+      ]
+    }, // Redo
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    }, // 移至行首
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    }, // 移动至行尾
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "g",
+        "t"
+      ]
+    }, // 标签跳动
+    {
+      "before": [
+        "J"
+      ],
+      "after": [
+        "g",
+        "T"
+      ]
+    }, // 标签跳动
+    /* windows */
+    {
+      "before": [
+        "<tab>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
+    }, // 窗口切换
+    {
+      "before": [
+        "<tab>",
+        "k"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    }, // 窗口切换
+    {
+      "before": [
+        "<tab>",
+        "j"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
+    }, // 窗口切换
+    /*
+     * CALL action
+     */
+    {
+      "before": [
+        "<leader>",
+        "<leader>",
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    }, // vscode raw -- commands
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        ":noh"
+      ]
+    }, // vim raw -- no search highlight
+    {
+      "before": [
+        "<leader>",
+        "e",
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    }, // file -- open explorer
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "s"
+      ],
+      "commands": [
+        "workbench.files.action.showActiveFileInExplorer"
+      ]
+    }, // file -- show file in explorer
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f",
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    }, // file -- open file
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "renameFile"
+      ]
+    }, // file -- rename file
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "a"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    }, // file -- global search
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "p"
+      ],
+      "commands": [
+        "revealFileInOS"
+      ]
+    }, // file -- open file in finder
+    {
+      "before": [
+        "<leader>",
+        "/",
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    }, // edit -- comment line
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.changeAll"
+      ]
+    }, // edit -- select all same selections
+    {
+      "before": [
+        "<leader>",
+        "]",
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    }, // lsp -- jump next error
+    {
+      "before": [
+        "<leader>",
+        "[",
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    }, // lsp -- jump previous error
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    }, // lsp -- jump to definition
+    {
+      "before": [
+        "g",
+        "u"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    }, // lsp --  jump references
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "l",
+      ],
+      "commands": [
+        "rust-analyzer.run"
+      ]
+    }, // lsp -- rust-analyzer runnables
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "s",
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    }, // lsp -- show symbols in editor 
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "a",
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    }, // lsp -- code action or fix
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "k",
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    }, // lsp -- show hover document of current symbol
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    }, // lsp -- format file
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "r",
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    }, // lsp -- rename symbol
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "b"
+      ],
+      "commands": [
+        "editor.debug.action.toggleBreakpoint"
+      ]
+    }, // debug -- set breakpoint
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "r"
+      ],
+      "commands": [
+        "extension.node-debug.startWithStopOnEntry"
+      ]
+    }, // debug -- run
+  ],
+  /* visual模式 */
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "/",
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    }, // 注释
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ],
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "1",
+        "0",
+        "j"
+      ]
+    }, // 快速移动
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "1",
+        "0",
+        "k"
+      ]
+    }, // 快速移动
+    {
+      "before": [
+        "i"
+      ],
+      "after": [
+        "<Esc>",
+        "i"
+      ]
+    },
+    {
+      "before": [
+        "a"
+      ],
+      "after": [
+        "<Esc>",
+        "a"
+      ]
+    },
+    {
+      "before": [
+        "o"
+      ],
+      "after": [
+        "<Esc>",
+        "o"
+      ]
+    },
+  ],
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "NOTE"
+  ],
+  "todo-tree.general.statusBar": "total",
+  "todo-tree.general.statusBarClickBehaviour": "toggle highlights",
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "foreground": "#1e2127",
+      "background": "#61afef",
+    },
+    "NOTE": {
+      "foreground": "#1e2127",
+      "background": "#98c379",
+    },
+    "FIXME": {
+      "foreground": "#1e2127",
+      "background": "#d19a66",
+    },
+    "BUG": {
+      "foreground": "#1e2127",
+      "background": "#e06c75",
+    },
+    "HACK": {
+      "foreground": "#1e2127",
+      "background": "#abb2bf",
+    },
+  },
+  "todo-tree.highlights.enabled": false,
+}

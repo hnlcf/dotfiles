@@ -1,0 +1,65 @@
+Config { 
+         font = "xft:IosevkaTerm Nerd Font Mono,Noto Sans Mono CJK SC:size=14,12:weight=bold,bold:antialias=true:hinting=true"
+       , additionalFonts = ["xft:Noto Sans Mono CJK SC:size=12:weight=bold:antialias=true:hinting=true"]
+
+
+       , bgColor      = "#282c34"
+       , fgColor      = "#abb2bf"
+
+
+       -- Position TopSize and BottomSize take 3 arguments:
+       --   an alignment parameter (L/R/C) for Left, Right or Center.
+       --   an integer for the percentage width, so 100 would be 100%.
+       --   an integer for the minimum pixel height for xmobar, so 24 would force a height of at least 24 pixels.
+       --   NOTE: The height should be the same as the trayer (system tray) height.
+       , position       = TopSize R 100 24
+       , lowerOnStart = True
+       , hideOnStart  = False
+       , allDesktops  = True
+       , persistent   = True
+       , iconRoot     = ".xmonad/xpm/"  -- default: "."
+       , commands = [
+                        -- Cpu usage
+                    Run Cpu ["-t", "<box type=Bottom width=2 mb=2 color=#ff6c6d><fc=#ff6c6d>Cpu: <total>%</fc></box>","-H","50","--high","red"] 20
+
+
+                        -- Memory used and percent
+                    , Run Memory ["-t", "<box type=Bottom width=2 mb=2 color=#98c379><fc=#98c379>Mem: <used>M (<usedratio>%)</fc></box>"] 20
+
+
+                        -- Dynamic network current
+                    , Run DynNetwork ["-t", "<box type=Bottom width=2 mb=2 color=#a9a1e1><fc=#a9a1e1>Net: <rx>KB / <tx>KB</fc></box>"] 10
+
+
+                        -- Disk space free
+                    , Run DiskU [("/", "HDD: <free> free")] [] 60
+
+
+                        -- Show memory
+                    , Run Com "/home/changfeng/bin/show_mem.sh" [] "my_mem" 20
+
+
+                        -- Show ipv4
+                    , Run Com "/home/changfeng/bin/show_ip.sh" [] "my_ip" 36000
+
+
+                        -- Battery
+                    , Run BatteryP ["BAT0"] ["-t", "<left>%"] 300
+
+
+                        -- Time and date
+                    , Run Date "<box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b>%Y/%m/%d - %H:%M:%S</fc></box>" "date" 10
+
+
+                        -- Script that dynamically adjusts xmobar padding depending on number of trayer icons.
+                    , Run Com ".config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 20
+
+
+                        -- Prints out the left side items such as workspaces, layout, etc.
+                    , Run UnsafeStdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{" 
+       -- <fc=#46d9ff #ff6c6b #ecbe7b #98c379 #da8548>%date%</fc>
+       , template = " %UnsafeStdinReader% }{ %dynnetwork% | %memory% | %cpu% | %date% || %trayerpad%"
+       }

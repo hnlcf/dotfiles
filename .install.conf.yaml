@@ -1,0 +1,67 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.agignore:
+    ~/.aria2/aria2.conf:
+    ~/.axelrc:
+    ~/.bash:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.dotfiles: ''
+    ~/.gdbinit:
+    ~/.gitconfig:
+    ~/.cgdb:
+    ~/.gitignore_global:
+    ~/.haskeline:
+    ~/.hgrc:
+    ~/.inputrc:
+    ~/.ipython/profile_default/ipython_config.py: ipython/ipython_config.py
+    ~/.ipython/profile_default/ipython_kernel_config.py: ipython/ipython_kernel_config.py
+    ~/.ipython/profile_default/startup/disable_warnings.py: ipython/disable_warnings.py
+    ~/.pythonrc:
+    ~/.rtorrent.rc:
+    ~/.shell:
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.vimrc: vimrc
+    ~/.xmonad/xmonad.hs: xmonad.hs
+    ~/.config/alacritty: alacritty 
+    ~/.config/bottom: bottom
+    ~/.config/dunst: dunst
+    ~/.config/helix: helix 
+    ~/.config/lazygit: lazygit
+    ~/.config/nvim: nvim
+    ~/.config/nvim/lua/user/init.lua: astro_nvim_user.lua
+    ~/.config/picom: picom
+    ~/.config/polybar: polybar
+    ~/.config/starship.toml: starshiprc 
+    ~/.config/sublime-text: sublime-text
+    ~/.config/sublime-merge: sublime-merge
+    ~/.config/tmux: tmux
+    ~/.config/xmobar: xmobar
+    ~/.config/zellij: zellij
+    ~/.vimrc_local:
+    ~/.ideavimrc:
+    ~/.vsvimrc: vscode/vsvimrc
+    ~/.zsh:
+    ~/.zshrc: zshrc_local
+    ~/.shell_local_before:
+    # ~/.zfunctions/prompt_spaceship_setup: zsh/prompt/spaceship-prompt/spaceship.zsh
+
+- create:
+  - ~/.rtorrent/session
+  - ~/.rtorrent/watch
+  - ~/.rtorrent/downloads
+
+- shell:
+  - git submodule sync --recursive
+  # the following have to run after linking ~/.gitconfig
+  - git update-submodules
+  - >
+    git cleanall -f
+    shell/plugins/
+    zsh/plugins/
