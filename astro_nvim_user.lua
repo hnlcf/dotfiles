@@ -1,5 +1,5 @@
 return {
-  colorscheme = "catppuccin",
+  colorscheme = "vscode",
   lsp = {
     -- Automatic formatting on save
     formatting = {
@@ -83,13 +83,42 @@ return {
     },
 
     -- vscode colorscheme
-    { "Mofiqul/vscode.nvim" },
+    {
+      "Mofiqul/vscode.nvim",
+      as = "vscode",
+      config = function()
+        require("vscode").setup {
+          -- Alternatively set style in setup
+          -- style = 'light'
+
+          -- Enable transparent background
+          transparent = false,
+
+          -- Enable italic comment
+          italic_comments = true,
+
+          -- Disable nvim-tree background color
+          disable_nvimtree_bg = false,
+        }
+      end,
+    },
 
     -- sonokai colorscheme
     { "sainnhe/sonokai" },
 
     -- gruvbox colorscheme
     { "ellisonleao/gruvbox.nvim" },
+
+    -- onedark colorscheme
+    {
+      "navarasu/onedark.nvim",
+      as = "onedark",
+      config = function()
+        require("onedark").setup {
+          style = "darker"
+        }
+      end
+    },
 
     -- clangd extensions
     {
@@ -293,18 +322,3 @@ return {
     },
   },
 }
---   ["which-key"] = {
---     register = {
---       n = {
---         ["<leader>"] = {
---           -- Rust mappings
---           r = {
---             name = "Rust",
---             -- Rust tools mappings:
---           },
---
---         },
---       },
---     },
---   },
--- }
