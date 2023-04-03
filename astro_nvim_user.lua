@@ -1,5 +1,5 @@
 return {
-  colorscheme = "vscode",
+  colorscheme = "gruvbox",
   lsp = {
     -- Automatic formatting on save
     formatting = {
@@ -19,7 +19,7 @@ return {
       "ocamllsp",          -- OCaml(official)
       "pyright",           -- Python(pip)
       "racket_langserver", -- Racket(official)
-      "rust_analyzer",     -- Rust(rustup)
+      "rust_analyzer",     -- Rust(manual)
       "texlab",            -- Latex(cargo)
       -- "taplo",             -- Toml(cargo)
     },
@@ -107,7 +107,17 @@ return {
     { "sainnhe/sonokai" },
 
     -- gruvbox colorscheme
-    { "ellisonleao/gruvbox.nvim" },
+    {
+      "ellisonleao/gruvbox.nvim",
+      as = "gruvbox",
+      config = function()
+        require("gruvbox").setup {
+          overrides = {
+            StatusLine = { fg = "#ebdbb2", bg = "#504945" },
+          },
+        }
+      end
+    },
 
     -- onedark colorscheme
     {
@@ -305,8 +315,8 @@ return {
         },
       }
     },
-    -- make sure the necessary lsp servers installed before configuring servers' extension
 
+    -- make sure the necessary lsp servers installed before configuring servers' extension
     {
       "williamboman/mason-lspconfig.nvim",
       opts = {
