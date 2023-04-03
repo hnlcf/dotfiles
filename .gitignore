@@ -8,3 +8,5 @@ debugger/
 tmux/plugins/
 
 lazygit/state.yml
+
+helix/runtime

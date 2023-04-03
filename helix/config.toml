@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "dark_plus"
 
 [editor]
 scrolloff = 5
@@ -6,6 +6,7 @@ line-number = "relative"
 color-modes = true
 cursorline = true
 auto-format = true
+bufferline = "always"
 
 
 [editor.cursor-shape]
@@ -16,5 +17,30 @@ select = "underline"
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "selections", "file-encoding", "file-line-ending", "file-type", "position"]
 separator = "│"
+
+[editor.lsp]
+display-messages = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+C-s = ":w"
+
