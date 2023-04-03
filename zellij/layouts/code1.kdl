@@ -1,17 +1,17 @@
 layout {
     default_tab_template {
         // Tab bar
-        pane size=1 borderless=true {
+        pane size=1 {
             plugin location="zellij:tab-bar"
         }
         children
         // Status bar
-        pane size=2 borderless=true {
+        pane size=2 {
             plugin location="zellij:status-bar"
         }
     }
     tab_template name="code_editor" {
-        pane size=1 borderless=true {
+        pane size=1 {
             plugin location="zellij:tab-bar"
         }
         pane split_direction="vertical" {
@@ -21,7 +21,7 @@ layout {
             }
             children
         }
-        pane size=2 borderless=true {
+        pane size=2 {
             plugin location="zellij:status-bar"
         }
     }

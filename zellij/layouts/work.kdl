@@ -7,12 +7,12 @@ layout {
     }
     full_tab name="Local" {
         pane split_direction="vertical" {
-            pane borderless=true focus=true
-            pane borderless=true size="30%"
+            pane focus=true
+            pane size="30%"
         }
     }
     full_tab name="Editor" cwd="/home/changfeng/workspace/shuimu" {
-        pane borderless=true size="70%" focus=true 
+        pane size="70%" focus=true 
         pane 
     }
     full_tab name="Terminal" cwd="/home/changfeng/workspace/shuimu" {
@@ -20,12 +20,12 @@ layout {
     }
     full_tab name="Remote" {
         pane split_direction="vertical" {
-            pane borderless=true focus=true
-            pane borderless=true size="30%"
+            pane focus=true
+            pane size="30%"
         }
     }
     full_tab name="Performance" {
-        pane borderless=true focus=true {
+        pane focus=true {
             command "btop"
         }
     }

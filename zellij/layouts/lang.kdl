@@ -15,8 +15,8 @@ layout {
     }
     full_tab name="Terminal" {
         pane split_direction="vertical" {
-            pane borderless=true focus=true
-            pane borderless=true size="30%"
+            pane focus=true
+            pane size="30%"
         }
     }
 }
