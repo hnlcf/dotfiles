@@ -1,6 +1,5 @@
 {
   "http.proxy": "http://127.0.0.1:15777",
-  "window.zoomLevel": 1,
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.copyOnSelection": true,
   "workbench.colorTheme": "Default Dark+ Experimental",
@@ -14,7 +13,7 @@
   "editor.mouseWheelZoom": true,
   "editor.lineHeight": 1.6,
   "editor.indentSize": "tabSize",
-  "editor.inlayHints.fontSize": 18,
+  "editor.inlayHints.fontSize": 16,
   "editor.inlayHints.fontFamily": "IosevkaTerm Nerd Font Mono",
   "editor.codeLensFontFamily": "IosevkaTerm Nerd Font Mono",
   "editor.formatOnSave": true,
@@ -32,7 +31,7 @@
   "terminal.integrated.lineHeight": 1.1,
   "cmake.buildTask": true,
   "cmake.configureOnOpen": true,
-  "cmake.generator": "Unix Makefiles",
+  "cmake.generator": "Ninja",
   "git.confirmSync": false,
   "gitlens.defaultDateFormat": null,
   "gitlens.defaultDateShortFormat": null,
@@ -72,6 +71,7 @@
   "markdown.preview.lineHeight": 1.8,
   "markdownlint.config": {
     "MD014": false,
+    "MD024": false,
   },
   "files.exclude": {
     "*.sublime-project": true,
@@ -560,4 +560,7 @@
     },
   },
   "todo-tree.highlights.enabled": false,
+  "bazel.enableCodeLens": true,
+  "window.zoomLevel": 2,
+  "editor.minimap.enabled": false,
 }
