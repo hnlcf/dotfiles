@@ -59,7 +59,7 @@
   "clangd.arguments": [
     "--header-insertion=never"
   ],
-  "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+  "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
   "rust-analyzer.imports.prefix": "self",
   "rust-analyzer.restartServerOnConfigChange": true,
   "rust-analyzer.check.command": "clippy",
