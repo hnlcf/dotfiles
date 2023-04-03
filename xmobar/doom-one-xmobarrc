@@ -1,6 +1,6 @@
 Config { 
-         font = "xft:IosevkaTerm Nerd Font Mono,Noto Sans Mono CJK SC:size=14,12:weight=bold,bold:antialias=true:hinting=true"
-       , additionalFonts = ["xft:Noto Sans Mono CJK SC:size=12:weight=bold:antialias=true:hinting=true"]
+         font = "xft:IosevkaTerm Nerd Font Mono,Noto Sans Mono CJK SC:size=18,18:weight=bold,bold:antialias=true:hinting=true"
+       , additionalFonts = ["xft:Noto Sans Mono CJK SC:size=18:weight=bold:antialias=true:hinting=true"]
 
 
        , bgColor      = "#282c34"
@@ -12,7 +12,7 @@ Config {
        --   an integer for the percentage width, so 100 would be 100%.
        --   an integer for the minimum pixel height for xmobar, so 24 would force a height of at least 24 pixels.
        --   NOTE: The height should be the same as the trayer (system tray) height.
-       , position       = TopSize R 100 24
+       , position       = TopSize R 100 28
        , lowerOnStart = True
        , hideOnStart  = False
        , allDesktops  = True

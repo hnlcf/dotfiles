@@ -96,7 +96,7 @@ myTerminal :: String
 myTerminal = "alacritty" -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "google-chrome-stable " -- Sets qutebrowser as browser
+myBrowser = "firefox" -- Sets qutebrowser as browser
 
 myEditor :: String
 -- myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
@@ -116,7 +116,7 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawn "killall conky" -- kill current conky on each restart
+  -- spawn "killall conky" -- kill current conky on each restart
   spawn "killall trayer" -- kill current trayer on each restart
   spawnOnce "lxsession"
   spawnOnce "picom"
@@ -124,11 +124,11 @@ myStartupHook = do
   spawnOnce "volumeicon"
   -- spawnOnce "notify-log $HOME/.log/notify.log"
 
-  spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
+  -- spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
   spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 0 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 28")
 
-  spawn "~/bin/swap_caps_esc_in_xmonad.sh &" -- swap keys
-  spawn "~/bin/enbale_wifi.sh &" -- enable WIFI
+  spawn "/home/changfeng/bin/swap_caps_esc_in_xmonad.sh" -- swap keys
+  spawn "/home/changfeng/bin/enbale_wifi.sh" -- enable WIFI
 
   -- spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
 
@@ -221,7 +221,7 @@ tall =
         windowNavigation $
           addTabs shrinkText myTabTheme $
             subLayout [] (smartBorders Simplest) $
-              mySpacing 8 $
+              mySpacing 4 $
                 ResizableTall 1 (3 / 100) (1 / 2) []
 
 monocle =
@@ -427,6 +427,7 @@ myKeys c =
             ("M-p w", addName "List windows" $ spawn "rofi -show-icons -show window"),
             ("M-p e", addName "List executables" $ spawn "rofi -show-icons -show run")
           ]
+
         ^++^ subKeys
           "Favorite programs"
           [ ("M-<Return>", addName "Launch terminal" $ spawn myTerminal),
