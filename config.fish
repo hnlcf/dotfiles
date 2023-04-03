@@ -34,6 +34,19 @@ function noproxy -d "Unset old proxy."
   echo "-- Erase old proxy."
 end
 
+function fvim -d "Vim with fzf"
+  set --export FZF_DEFAULT_COMMAND "fd -tf --hidden --strip-cwd-prefix --exclude .git --exclude .cache --exclude .idea"
+  set --export FZF_DEFAULT_OPTS "--preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+  fzf --print0 | xargs -0 -o vim
+end
+
+function fcd -d "Cd with fzf"
+  set --export FZF_DEFAULT_COMMAND "fd -td --hidden --no-ignore --strip-cwd-prefix"
+
+  cd (fzf)
+end
+
 ###
 ### Environment varibales
 ###
@@ -56,6 +69,8 @@ set --global --export GOPATH "$HOME/workspace/go/package"
 # Set China mirror of Elixir mix
 set --global --export HEX_MIRROR "https://hexpm.upyun.com"
 set --global --export HEX_CDN "https://hexpm.upyun.com"
+set --global --export HELIX_RUNTIME "$HOME/.config/helix/runtime"
+
 
 ###
 ### Command aliases
@@ -64,7 +79,6 @@ set --global --export HEX_CDN "https://hexpm.upyun.com"
 alias wl='~/workspace'
 alias j='ranger'
 alias vi='nvim'
-alias hx='helix'
 alias zj='zellij'
 alias sl="subl"
 alias sm="smerge"
@@ -100,4 +114,12 @@ starship init fish | source
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/changfeng/Applications/anaconda3/bin/conda
+    eval /home/changfeng/Applications/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
 
