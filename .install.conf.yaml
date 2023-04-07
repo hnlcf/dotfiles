@@ -11,7 +11,7 @@
     ~/.axelrc:
     ~/.bash:
     ~/.bash_profile:
-    ~/.bashrc:
+    # ~/.bashrc:
     ~/.dotfiles: ''
     ~/.gdbinit:
     ~/.gitconfig:
