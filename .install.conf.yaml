@@ -11,7 +11,7 @@
     ~/.axelrc:
     ~/.bash:
     ~/.bash_profile:
-    # ~/.bashrc:
+    ~/.bashrc:
     ~/.dotfiles: ''
     ~/.gdbinit:
     ~/.gitconfig:
@@ -44,6 +44,7 @@
     ~/.config/tmux: tmux
     ~/.config/xmobar: xmobar
     ~/.config/zellij: zellij
+    ~/.config/fish/config.fish: config.fish
     ~/.vimrc_local:
     ~/.ideavimrc:
     ~/.vsvimrc: vscode/vsvimrc

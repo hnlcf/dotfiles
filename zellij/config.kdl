@@ -367,11 +367,11 @@ scrollback_editor "/usr/bin/nvim"
 
 // The folder in which Zellij will look for layouts
 //
-layout_dir "/home/changfeng/.config/zellij/layouts"
+layout_dir "~/.config/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 //
-theme_dir "/home/changfeng/.config/zellij/themes"
+theme_dir "~/.config/zellij/themes"
 
 plugins {
     tab-bar { path "tab-bar"; }
