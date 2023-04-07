@@ -99,13 +99,13 @@ alias rm='rm -i'
 ###
 
 # Anaconda conda
-# eval /home/changfeng/Applications/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# eval ~/Applications/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 
 # OCaml opam
-source /home/changfeng/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 # Prompt starship
-starship init fish | source
+~/.cargo/bin/starship init fish | source
 
 ###
 ### Interactive mode
@@ -118,8 +118,8 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/changfeng/Applications/anaconda3/bin/conda
-    eval /home/changfeng/Applications/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-end
+# if test -f ~/Applications/anaconda3/bin/conda
+# eval ~/Applications/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# end
 # <<< conda initialize <<<
 
