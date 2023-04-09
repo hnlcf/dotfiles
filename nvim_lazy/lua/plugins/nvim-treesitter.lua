@@ -5,6 +5,9 @@ return {
     opts = {
       ensure_installed = {
         "bash",
+        "c",
+        "cpp",
+        "fish",
         "help",
         "html",
         "javascript",
@@ -15,6 +18,8 @@ return {
         "python",
         "query",
         "regex",
+        "rust",
+        "toml",
         "tsx",
         "typescript",
         "vim",

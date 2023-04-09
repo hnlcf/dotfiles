@@ -79,6 +79,8 @@ set --global --export HELIX_RUNTIME "$HOME/.config/helix/runtime"
 alias wl='~/workspace'
 alias j='ranger'
 alias vi='nvim'
+alias nvim-astro='NVIM_APPNAME=Astronvim nvim'
+alias nvim-lazy='NVIM_APPNAME=Lazynvim nvim'
 alias zj='zellij'
 alias sl="subl"
 alias sm="smerge"
