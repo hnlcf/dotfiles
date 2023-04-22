@@ -2,7 +2,7 @@
 // and are overridden in turn by syntax-specific settings.
 {
 	"font_face": "IosevkaTerm Nerd Font Mono",
-	"font_size": 16,
+	"font_size": 15,
 	"side_bar_layout": "commit_graph_as_column",
 	"always_show_command_status": true,
 	"editor_path": "nvim",

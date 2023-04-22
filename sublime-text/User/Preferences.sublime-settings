@@ -5,12 +5,21 @@
 	"theme": "Default Dark.sublime-theme",
 	"hardware_acceleration": "opengl",
 	"font_face": "IosevkaTerm Nerd Font Mono",
-	"font_size": 16,
+	"font_size": 17,
+	"word_wrap": false,
 	"line_padding_top": 5,
 	"line_padding_bottom": 5,
+	"show_full_path": false,
+	"show_rel_path": true,
+	"show_project_first": true,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"scroll_context_lines": 5,
+	"translate_tabs_to_spaces": true,
+	"draw_white_space": [
+		"selection",
+		"all_mixed"
+	],
 	"folder_exclude_patterns": [
 		".cache",
 		".idea",
@@ -24,5 +33,6 @@
 	"vintage_use_clipboard": true,
 	"ignored_packages": [
 		"Rust",
+		"SublimeHaskell",
 	],
 }

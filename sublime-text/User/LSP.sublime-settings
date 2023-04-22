@@ -1,10 +1,40 @@
 {
-	"lsp_format_on_save": false,
-	"show_inlay_hints": true,
-	"show_diagnostics_panel_on_save": 0,
-	"clients": {
-		"clangd": {
-			"enabled": true,
-		},
-	},
+    "lsp_format_on_save": true,
+    "show_inlay_hints": true,
+    "show_diagnostics_count_in_view_status": true,
+    "show_diagnostics_in_view_status": true,
+    "show_diagnostics_severity_level": 4,
+    "show_diagnostics_panel_on_save": 4,
+    "show_references_in_quick_panel": true,
+    "clients": {
+        "clangd": {
+            "enabled": true,
+        },
+        "clojure-lsp": {
+            "enabled": true,
+            "command": [
+                "/usr/bin/clojure-lsp"
+            ],
+            "selector": "source.clojure",
+            "initializationOptions": {},
+        },
+        "ocaml": {
+            "command": [
+                "ocaml-language-server",
+                "--stdio"
+            ],
+            "selector": "source.reason | source.ocaml",
+        },
+        "haskell-language-server": {
+            "enabled": true,
+            "command": [
+                "haskell-language-server-wrapper",
+                "--lsp"
+            ],
+            "selector": "source.haskell",
+            "settings": {
+                "haskell.formattingProvider": "ormolu",
+            },
+        },
+    },
 }

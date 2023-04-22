@@ -5,6 +5,19 @@
         ],
         "command": "toggle_side_bar"
     },
+    // Jump
+    {
+        "keys": [
+            "alt+o"
+        ],
+        "command": "jump_back"
+    },
+    {
+        "keys": [
+            "alt+i"
+        ],
+        "command": "jump_forward"
+    },
     // LSP -- Document Hover
     {
         "command": "lsp_hover",
