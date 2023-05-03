@@ -4,7 +4,7 @@
 	"color_scheme": "Mariana.sublime-color-scheme",
 	"theme": "Default Dark.sublime-theme",
 	"hardware_acceleration": "opengl",
-	"font_face": "IosevkaTerm Nerd Font Mono",
+	"font_face": "Iosevka Nerd Font Mono",
 	"font_size": 17,
 	"word_wrap": false,
 	"line_padding_top": 5,

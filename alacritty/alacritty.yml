@@ -83,20 +83,20 @@ font:
   normal:
     # family: RobotoMono Nerd Font Mono
     # family: JetBrainsMono Nerd Font Mono
-    family: IosevkaTerm Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Regular
 
   # The bold font face
   bold:
-    family: IosevkaTerm Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Bold Italic
 
   # The italic font face
   italic:
-    family: IosevkaTerm Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Italic
 
-  size: 19
+  size: 16
 
   # ligatures: true
 
