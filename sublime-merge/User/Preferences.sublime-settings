@@ -1,9 +1,9 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"font_face": "IosevkaTerm Nerd Font Mono",
+	"font_face": "Iosevka Nerd Font Mono",
 	"font_size": 15,
-	"side_bar_layout": "commit_graph_as_column",
+	"side_bar_layout": "tabs",
 	"always_show_command_status": true,
 	"editor_path": "nvim",
 	"hardware_acceleration": "opengl",

@@ -5,6 +5,12 @@
         ],
         "command": "toggle_side_bar"
     },
+    {
+        "keys": [
+            "ctrl+alt+b"
+        ],
+        "command": "cancel_build"
+    },
     // Jump
     {
         "keys": [
@@ -107,6 +113,19 @@
         "context": [
             {
                 "key": "setting.lsp_active"
+            }
+        ]
+    },
+    // LSP --  Run Code Action
+    {
+        "keys": [
+            "alt+a"
+        ],
+        "command": "lsp_code_actions",
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operand": "codeActionProvider"
             }
         ]
     },

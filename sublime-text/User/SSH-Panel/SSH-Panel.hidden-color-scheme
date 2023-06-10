@@ -1,0 +1,8 @@
+{
+     "globals": {
+          "background": "#202831",
+          "foreground": "#d8dee9"
+     },
+     "variables": {},
+     "name": "SSH-Panel"
+}

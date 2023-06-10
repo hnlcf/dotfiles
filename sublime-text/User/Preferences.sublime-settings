@@ -5,7 +5,7 @@
 	"theme": "Default Dark.sublime-theme",
 	"hardware_acceleration": "opengl",
 	"font_face": "Iosevka Nerd Font Mono",
-	"font_size": 17,
+	"font_size": 18,
 	"word_wrap": false,
 	"line_padding_top": 5,
 	"line_padding_bottom": 5,
@@ -32,7 +32,7 @@
 	"vintage_start_in_command_mode": true,
 	"vintage_use_clipboard": true,
 	"ignored_packages": [
-		"Rust",
+		// "Rust",
 		"SublimeHaskell",
 	],
 }

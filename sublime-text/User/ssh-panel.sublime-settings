@@ -1,0 +1,14 @@
+{
+    "server_settings": {
+        "docker-tmp": {
+            "hostname": "172.17.0.2",
+            "username": "root",
+            "password": "1234",
+            "save_password": true,
+            "remote_path": [
+                "/root"
+            ],
+            "local_path": "/home/changfeng/SFTP-Local/668c527e5e9ab2a15754c28623bc90cd",
+        },
+    },
+}
