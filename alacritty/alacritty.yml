@@ -76,7 +76,7 @@ colors:
 cursor:
   style:
     shape: Beam
-    blinking: Never
+    blinking: Always
 
 font:
   # The normal (roman) font face to use.
@@ -89,7 +89,7 @@ font:
   # The bold font face
   bold:
     family: Iosevka Nerd Font Mono
-    style: Bold Italic
+    style: Bold
 
   # The italic font face
   italic:
@@ -127,7 +127,7 @@ window:
 
   startup_mode: Maximized
 
-  opacity: 0.90
+  opacity: 0.95
   # selection:
   save_to_clipboard: true
   live_config_reload: true
