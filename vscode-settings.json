@@ -5,7 +5,6 @@
   "workbench.colorTheme": "Default Dark+ Experimental",
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "vscode-icons",
-  "keyboard.dispatch": "keyCode",
   "vsicons.dontShowNewVersionMessage": true,
   "editor.fontSize": 18,
   "editor.fontFamily": "Iosevka Nerd Font Mono",
@@ -66,7 +65,7 @@
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
   "rust-analyzer.debug.openDebugPane": true,
   "rust-analyzer.lru.capacity": 1024,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdown.preview.fontFamily": "Iosevka Nerd Font Mono",
   "markdown.preview.lineHeight": 1.8,
   "markdownlint.config": {
@@ -561,6 +560,8 @@
   },
   "todo-tree.highlights.enabled": false,
   "bazel.enableCodeLens": true,
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "editor.minimap.enabled": false,
+  "elixirLS.fetchDeps": true,
+  "keyboard.dispatch": "keyCode",
 }
