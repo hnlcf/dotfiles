@@ -19,7 +19,7 @@ set guioptions ""
 
 # zathurarc-dark
 
-set font "IosevkaTerm Nerd Font Mono 15"
+set font "Iosevka Nerd Font Mono 15"
 set default-bg "#000000" #00
 set default-fg "#F7F7F6" #01
 

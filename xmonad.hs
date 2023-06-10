@@ -28,7 +28,7 @@
 -- TomorrowNight
 import Colors.DoomOne
 import Data.Char (isSpace, toUpper)
-import qualified Data.Map as M
+import Data.Map qualified as M
 import Data.Maybe (fromJust, isJust)
 import Data.Monoid
 import Data.Tree
@@ -42,7 +42,7 @@ import XMonad.Actions.GridSelect
 import XMonad.Actions.MouseResize
 import XMonad.Actions.Promote
 import XMonad.Actions.RotSlaves (rotAllDown, rotSlavesDown)
-import qualified XMonad.Actions.Search as S
+import XMonad.Actions.Search qualified as S
 import XMonad.Actions.WindowGo (runOrRaise)
 import XMonad.Actions.WithAll (killAll, sinkAll)
 import XMonad.Config.Kde
@@ -61,7 +61,7 @@ import XMonad.Layout.GridVariants (Grid (Grid))
 import XMonad.Layout.LayoutModifier
 import XMonad.Layout.LimitWindows (decreaseLimit, increaseLimit, limitWindows)
 import XMonad.Layout.MultiToggle (EOT (EOT), mkToggle, single, (??))
-import qualified XMonad.Layout.MultiToggle as MT (Toggle (..))
+import XMonad.Layout.MultiToggle qualified as MT (Toggle (..))
 import XMonad.Layout.MultiToggle.Instances (StdTransformers (MIRROR, NBFULL, NOBORDERS))
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
@@ -74,10 +74,10 @@ import XMonad.Layout.Spiral
 import XMonad.Layout.SubLayouts
 import XMonad.Layout.Tabbed
 import XMonad.Layout.ThreeColumns
-import qualified XMonad.Layout.ToggleLayouts as T (ToggleLayout (Toggle), toggleLayouts)
+import XMonad.Layout.ToggleLayouts qualified as T (ToggleLayout (Toggle), toggleLayouts)
 import XMonad.Layout.WindowArranger (WindowArrangerMsg (..), windowArrange)
 import XMonad.Layout.WindowNavigation
-import qualified XMonad.StackSet as W
+import XMonad.StackSet qualified as W
 import XMonad.Util.Dmenu
 import XMonad.Util.EZConfig (additionalKeysP, mkNamedKeymap)
 import XMonad.Util.Hacks (javaHack, trayAbovePanelEventHook, trayPaddingEventHook, trayPaddingXmobarEventHook, trayerAboveXmobarEventHook, trayerPaddingXmobarEventHook, windowedFullscreenFixEventHook)
@@ -87,7 +87,7 @@ import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
 myFont :: String
-myFont = "xft:IosevkaTerm Nerd Font Mono:regular:size=12:antialias=true:hinting=true"
+myFont = "xft:Iosevka Nerd Font Mono:regular:size=12:antialias=true:hinting=true"
 
 myModMask :: KeyMask
 myModMask = mod4Mask -- Sets modkey to super/windows key
@@ -96,11 +96,12 @@ myTerminal :: String
 myTerminal = "alacritty" -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "firefox" -- Sets qutebrowser as browser
+myBrowser = "chromium" -- Sets qutebrowser as browser
 
 myEditor :: String
 -- myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
-myEditor = myTerminal ++ " -e nvim " -- Sets nvim as editor
+-- myEditor = myTerminal ++ " -e nvim " -- Sets nvim as editor
+myEditor = "subl" -- Sets sublime text as editor
 
 myBorderWidth :: Dimension
 myBorderWidth = 2 -- Sets border width for windows
@@ -116,23 +117,18 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawn "killall conky" -- kill current conky on each restart
   spawn "killall trayer" -- kill current trayer on each restart
   spawnOnce "lxsession"
-  spawnOnce "picom"
+  spawnOnce "flameshot"
   spawnOnce "nm-applet"
-  spawnOnce "volumeicon"
-  -- spawnOnce "notify-log $HOME/.log/notify.log"
-
-  -- spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
-  spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 0 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 28")
+  spawnOnce "volumeicon &"
+  spawnOnce "udiskie &" -- automount disk
+  spawn ("sleep 1 && trayer --edge bottom --align right --widthtype request --padding 0 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 1 " ++ colorTrayer ++ " --height 32")
 
   spawn "/home/changfeng/bin/swap_caps_esc_in_xmonad.sh" -- swap keys
   spawn "/home/changfeng/bin/enbale_wifi.sh" -- enable WIFI
-
-  -- spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
-
-  spawnOnce "exec /usr/bin/fcitx5"
+  spawnOnce "xrandr --output eDP-1-1 --off" -- close laptop's display
+  spawnOnce "exec /usr/bin/fcitx5" -- launch fcitx5
   spawnOnce "nitrogen --restore &" -- nitrogen set wallpaper
   setWMName "XMonad"
 
@@ -246,7 +242,7 @@ grid =
         windowNavigation $
           addTabs shrinkText myTabTheme $
             subLayout [] (smartBorders Simplest) $
-              mySpacing 8 $
+              mySpacing 4 $
                 mkToggle (single MIRROR) $
                   Grid (16 / 10)
 
@@ -314,7 +310,7 @@ myTabTheme =
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme =
   def
-    { swn_font = "xft:IosevkaTerm Nerd Font Mono:bold:size=60",
+    { swn_font = "xft:Iosevka Nerd Font Mono:bold:size=60",
       swn_fade = 1.0,
       swn_bgcolor = "#1c1f24",
       swn_color = "#ffffff"
@@ -361,7 +357,7 @@ subtitle' x =
 
 showKeybindings :: [((KeyMask, KeySym), NamedAction)] -> NamedAction
 showKeybindings x = addName "Show Keybindings" $ io $ do
-  h <- spawnPipe "yad --text-info --fontname=\"SauceCodePro Nerd Font Mono 14\" --fore=#46d9ff back=#282c36 --center --geometry=1200x800 --title \"XMonad keybindings\""
+  h <- spawnPipe "yad --text-info --fontname=\"Iosevka Nerd Font Mono 16\" --fore=#46d9ff back=#282c36 --center --geometry=1200x800 --title \"XMonad keybindings\""
   -- hPutStr h (unlines $ showKm x) -- showKM adds ">>" before subtitles
   hPutStr h (unlines $ showKmSimple x) -- showKmSimple doesn't add ">>" to subtitles
   hClose h
@@ -427,12 +423,12 @@ myKeys c =
             ("M-p w", addName "List windows" $ spawn "rofi -show-icons -show window"),
             ("M-p e", addName "List executables" $ spawn "rofi -show-icons -show run")
           ]
-
         ^++^ subKeys
           "Favorite programs"
           [ ("M-<Return>", addName "Launch terminal" $ spawn myTerminal),
             ("M-b", addName "Launch web browser" $ spawn myBrowser),
-            ("M-M1-h", addName "Launch htop" $ spawn (myTerminal ++ " -e htop"))
+            ("M-e", addName "Launch sublime editor" $ spawn myEditor),
+            ("M-M1-h", addName "Launch btop" $ spawn (myTerminal ++ " -e btop"))
           ]
         ^++^ subKeys
           "Monitors"
@@ -477,8 +473,6 @@ main :: IO ()
 main = do
   -- Launching three instances of xmobar on their monitors.
   xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
-  -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
-  -- xmproc2 <- spawnPipe ("xmobar -x 2 $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
   xmonad $
     addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $
       ewmh $
@@ -498,8 +492,6 @@ main = do
                 dynamicLogWithPP $
                   xmobarPP
                     { ppOutput = hPutStrLn xmproc0, -- xmobar on monitor 1
-                    -- >> hPutStrLn xmproc1 x   -- xmobar on monitor 2
-                    -- >> hPutStrLn xmproc2 x   -- xmobar on monitor 3
                       ppCurrent =
                         xmobarColor color06 ""
                           . wrap
