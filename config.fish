@@ -47,6 +47,31 @@ function fcd -d "Cd with fzf"
   cd (fzf)
 end
 
+function vmnew -d "Create a new container"
+  vm_manager.sh "new" $argv
+end
+
+function vmstart -d "Start a container"
+  vm_manager.sh "start" $argv
+end
+
+function vmstop -d "Stop a container"
+  vm_manager.sh "stop" $argv
+end
+
+function vmopen -d "Open a container"
+  vm_manager.sh "open" $argv
+end
+
+function vmrm -d "Delete a container"
+  vm_manager.sh "rm" $argv
+end
+
+function vmlist -d "List all containers"
+  vm_manager.sh "list" $argv
+end
+
+
 ###
 ### Environment varibales
 ###
@@ -71,21 +96,22 @@ set --global --export HEX_MIRROR "https://hexpm.upyun.com"
 set --global --export HEX_CDN "https://hexpm.upyun.com"
 set --global --export HELIX_RUNTIME "$HOME/.config/helix/runtime"
 
+set --global --export CARGO_REGISTRIES_CRATES_IO_PROTOCOL sparse
+
 
 ###
 ### Command aliases
 ###
 
 alias wl='~/workspace'
-alias j='ranger'
+alias j='joshuto'
 alias vi='nvim'
-alias nvim-astro='NVIM_APPNAME=Astronvim nvim'
-alias nvim-lazy='NVIM_APPNAME=Lazynvim nvim'
 alias zj='zellij'
 alias sl="subl"
 alias sm="smerge"
 alias cl='clear'
 alias gl="git clone"
+alias gitlog="git log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s %C(yellow)%d%C(reset)\" --date=relative --decorate --all"
 alias l="exa --all --long --icons --group-directories-first"
 alias ls="exa --icons --group-directories-first"
 alias ll="exa --long --icons --group-directories-first"
