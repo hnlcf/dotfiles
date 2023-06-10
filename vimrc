@@ -10,6 +10,9 @@ Plug 'morhetz/gruvbox'
 
 Plug 'tpope/vim-sensible'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " LSP
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
@@ -55,6 +58,7 @@ set relativenumber
 set encoding=utf-8
 set nobackup
 set nowritebackup
+set noshowmode
 set updatetime=300
 set signcolumn=yes
 set cursorline
@@ -178,3 +182,17 @@ nnoremap <leader>ps <cmd>PlugStatus<cr>
 let $FZF_DEFAULT_COMMAND = "fd -tf --hidden --strip-cwd-prefix --exclude .git --exclude .cache --exclude .idea"
 nmap <leader>ff :FZF<Cr>
 
+
+"""
+""" Airline Config
+"""
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_format = '%s: '
+let g:airline#extensions#battery#enabled = 1
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = '|'

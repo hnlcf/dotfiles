@@ -1,5 +1,5 @@
 return {
-  colorscheme = "gruvbox",
+  colorscheme = "catppuccin",
   lsp = {
     -- Automatic formatting on save
     formatting = {
@@ -21,11 +21,11 @@ return {
       "racket_langserver", -- Racket(official)
       "rust_analyzer",     -- Rust(manual)
       "texlab",            -- Latex(cargo)
-      "bashls",            -- Bahs(npm)
+      -- "bashls",            -- Bahs(npm)
       -- "taplo",             -- Toml(cargo)
     },
     -- skip default setup for lsp servers with extension
-    -- skip_setup = { "clangd", "rust_analyzer" }, -- skip lsp setup because rust-tools will do it itself
+    skip_setup = { "clangd", "rust_analyzer" }, -- skip lsp setup because rust-tools will do it itself
     -- config lsp server settings
     config = {
       -- C/C++
@@ -129,6 +129,27 @@ return {
           style = "darker"
         }
       end
+    },
+
+    {
+      "lvimuser/lsp-inlayhints.nvim",
+      branch = "anticonceal",
+      opts = {},
+      lazy = true,
+      init = function()
+        vim.api.nvim_create_autocmd("LspAttach", {
+          group = vim.api.nvim_create_augroup("LspAttach_inlayhints", {}),
+          callback = function(args)
+            if not (args.data and args.data.client_id) then
+              return
+            end
+
+            local bufnr = args.buf
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            require("lsp-inlayhints").on_attach(client, bufnr)
+          end,
+        })
+      end,
     },
 
     -- clangd extensions
@@ -255,7 +276,16 @@ return {
           "Upgrade all crates"
         },
       },
-      opts = function() return { server = require("astronvim.utils.lsp").config "rust_analyzer" } end
+      opts = function()
+        return {
+          server = require("astronvim.utils.lsp").config "rust_analyzer",
+          tools = {
+            inlay_hints = {
+              auto = false
+            }
+          }
+        }
+      end,
     },
 
     -- rust crates
@@ -322,10 +352,11 @@ return {
       "williamboman/mason-lspconfig.nvim",
       opts = {
         ensure_installed = {
-          -- "bashls",   -- Bash
+          "bashls",   -- Bash
           "cmake",    -- CMake
           "elixirls", -- Elixir
           "jsonls",   -- Json
+          "gopls",    -- Golang
           -- "yamlls", -- Yaml
           "lua_ls",   -- Lua
         },
@@ -341,7 +372,7 @@ return {
           statusline = {
             -- statusline
             hl = { fg = "fg", bg = "bg" },
-            status.component.mode { mode_text = { padding = { left = 1, right = 1 } } },
+            status.component.mode { mode_text = { padding = { left = 1, right = 1 } }, hl = { bold = true } },
             status.component.git_branch(),
             status.component.file_info { filetype = {}, filename = false, file_modified = false },
             status.component.git_diff(),
@@ -406,11 +437,11 @@ return {
             },
           },
           statuscolumn = vim.fn.has "nvim-0.9" == 1 and {
-                status.component.foldcolumn(),
-                status.component.fill(),
-                status.component.numbercolumn(),
-                status.component.signcolumn(),
-              } or nil,
+            status.component.foldcolumn(),
+            status.component.fill(),
+            status.component.numbercolumn(),
+            status.component.signcolumn(),
+          } or nil,
         }
       end,
       config = require "plugins.configs.heirline",
