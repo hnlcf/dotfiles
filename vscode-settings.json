@@ -560,7 +560,7 @@
   },
   "todo-tree.highlights.enabled": false,
   "bazel.enableCodeLens": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "editor.minimap.enabled": false,
   "elixirLS.fetchDeps": true,
   "keyboard.dispatch": "keyCode",
