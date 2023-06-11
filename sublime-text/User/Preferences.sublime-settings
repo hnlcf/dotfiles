@@ -2,7 +2,7 @@
 // and are overridden in turn by syntax-specific settings.
 {
 	"color_scheme": "Mariana.sublime-color-scheme",
-	"theme": "Default Dark.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"hardware_acceleration": "opengl",
 	"font_face": "Iosevka Nerd Font Mono",
 	"font_size": 18,
