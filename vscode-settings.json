@@ -2,7 +2,6 @@
   "http.proxy": "http://127.0.0.1:15777",
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.copyOnSelection": true,
-  "workbench.colorTheme": "Default Dark+ Experimental",
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "vscode-icons",
   "vsicons.dontShowNewVersionMessage": true,
@@ -65,7 +64,7 @@
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
   "rust-analyzer.debug.openDebugPane": true,
   "rust-analyzer.lru.capacity": 1024,
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "markdown.preview.fontFamily": "Iosevka Nerd Font Mono",
   "markdown.preview.lineHeight": 1.8,
   "markdownlint.config": {
@@ -564,4 +563,5 @@
   "editor.minimap.enabled": false,
   "elixirLS.fetchDeps": true,
   "keyboard.dispatch": "keyCode",
+  "workbench.colorTheme": "Default Light Modern",
 }
