@@ -136,7 +136,8 @@ return {
       branch = "anticonceal",
       opts = {},
       lazy = true,
-      init = function()
+      config = function(_, opts)
+        require("lsp-inlayhints").setup(opts)
         vim.api.nvim_create_autocmd("LspAttach", {
           group = vim.api.nvim_create_augroup("LspAttach_inlayhints", {}),
           callback = function(args)
@@ -150,6 +151,8 @@ return {
           end,
         })
       end,
+
+
     },
 
     -- clangd extensions
