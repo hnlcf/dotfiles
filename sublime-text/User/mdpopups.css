@@ -1,3 +1,7 @@
-html {
-  --mdpopups-font-mono: "Iosevka Nerd Font Mono";
+* {
+  font-family: "Iosevka Nerd Font Mono";
 }
+
+/* html { */
+/*   --mdpopups-font-mono: "Iosevka Nerd Font Mono"; */
+/* } */
