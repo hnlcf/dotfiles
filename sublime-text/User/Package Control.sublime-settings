@@ -16,6 +16,7 @@
 		"LSP-bash",
 		"LSP-clangd",
 		"LSP-elixir",
+		"LSP-html",
 		"LSP-json",
 		"LSP-marksman",
 		"LSP-pyright",
@@ -28,5 +29,6 @@
 		"SublimeHaskell",
 		"Terminus",
 		"TOML",
+		"Visual Studio Code Plus Scheme",
 	],
 }
