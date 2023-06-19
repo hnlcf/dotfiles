@@ -1,11 +1,11 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"color_scheme": "Mariana.sublime-color-scheme",
-	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "Light+.sublime-color-scheme",
+	"theme": "auto",
 	"hardware_acceleration": "opengl",
 	"font_face": "Iosevka Nerd Font Mono",
-	"font_size": 18,
+	"font_size": 20,
 	"word_wrap": false,
 	"line_padding_top": 5,
 	"line_padding_bottom": 5,
@@ -35,4 +35,6 @@
 		// "Rust",
 		"SublimeHaskell",
 	],
+	"dark_theme": "Adaptive.sublime-theme",
+	"light_theme": "Adaptive.sublime-theme",
 }

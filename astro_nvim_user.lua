@@ -1,5 +1,5 @@
 return {
-  colorscheme = "catppuccin",
+  colorscheme = "vscode",
   lsp = {
     -- Automatic formatting on save
     formatting = {
@@ -90,7 +90,7 @@ return {
       config = function()
         require("vscode").setup {
           -- Alternatively set style in setup
-          -- style = 'light'
+          style = 'light',
 
           -- Enable transparent background
           transparent = false,

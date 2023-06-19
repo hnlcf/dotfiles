@@ -1,0 +1,17 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+    "variables": {
+        // "green": "hsl(14, 1%, 30%)", // Actually, it is black.
+        // "green2": "hsl(115, 61%, 85%)", // The green background
+        // "grey2": "hsl(0, 0%, 50%)",
+        // "blue": "hsl(210, 70%, 40%)",
+        // "blue2": "hsl(180, 56%, 34%)",
+        // "orange": "hsl(32, 93%, 43%)",
+        // "red": "hsl(357, 79%, 45%)",
+        // "pink": "hsl(300, 40%, 48%)",
+    },
+    "globals": {
+        // "background": "var(green2)"
+    },
+    "rules": []
+}
