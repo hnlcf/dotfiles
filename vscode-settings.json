@@ -25,7 +25,7 @@
   "debug.console.fontSize": 18,
   "debug.console.fontFamily": "Iosevka Nerd Font Mono",
   "debug.allowBreakpointsEverywhere": true,
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
   "terminal.integrated.lineHeight": 1.1,
   "cmake.buildTask": true,

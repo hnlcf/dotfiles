@@ -9,8 +9,8 @@
     background-color:            #282c34;
     border-color:                #282c34;
     text-color:                  #bbc2cf;
-    font:                        "IosevkaTerm Nerd Font Mono 16";
-    prompt-font:                 "IosevkaTerm Nerd Font Mono 16";
+    font:                        "Iosevka Nerd Font Mono 18";
+    prompt-font:                 "Iosevka Nerd Font Mono 18";
     prompt-background:           #51afef;
     prompt-foreground:           #282c34;
     prompt-padding:              4px;
