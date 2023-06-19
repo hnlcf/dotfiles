@@ -10,13 +10,22 @@ layout {
         pane
     }
     full_tab name="Editor" cwd="/home/changfeng/workspace" {
-            pane size="70%" focus=true 
-            pane 
+        pane 
     }
     full_tab name="Terminal" {
         pane split_direction="vertical" {
-            pane focus=true
-            pane size="30%"
+            pane
+            pane
+        }
+    }
+    full_tab name="Files" {
+        pane focus=true {
+            command "joshuto"
+        }
+    }
+    full_tab name="Performance" {
+        pane focus=true {
+            command "btop"
         }
     }
 }

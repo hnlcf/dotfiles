@@ -1,0 +1,48 @@
+layout {
+    tab_template name="full_tab" {
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+    }
+    full_tab name="System" {
+        pane
+    }
+    full_tab name="Editor" cwd="/home/changfeng/workspace/quanting/quant_trader" {
+        pane 
+    }
+    full_tab name="Terminal" cwd="/home/changfeng/workspace/quanting/quant_trader" {
+        pane split_direction="vertical" {
+            pane
+            pane
+        }
+    }
+    full_tab name="Launch" cwd="/home/changfeng/workspace/quanting/quant_trader" {
+        pane split_direction="vertical" {
+            pane focus=true {
+                pane
+            }
+            pane {
+                command "tail"
+                args "-f" "log/output.log"
+            }
+        }
+    }
+    full_tab name="Docker" cwd="/home/changfeng/workspace/quanting/quant_trader" {
+        pane split_direction="vertical" {
+            pane
+            pane
+        }
+    }
+    full_tab name="Files" cwd="/home/changfeng/workspace/quanting/quant_trader" {
+        pane focus=true {
+            command "joshuto"
+        }
+    }
+    full_tab name="Performance" {
+        pane focus=true {
+            command "btop"
+        }
+    }
+}
+

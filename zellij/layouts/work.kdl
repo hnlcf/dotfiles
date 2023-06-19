@@ -5,23 +5,42 @@ layout {
             plugin location="zellij:compact-bar"
         }
     }
-    full_tab name="Local" {
+    full_tab name="System" {
         pane split_direction="vertical" {
             pane focus=true
-            pane size="30%"
+            pane size="40%"
         }
     }
     full_tab name="Editor" cwd="/home/changfeng/workspace/shuimu" {
-        pane size="70%" focus=true 
         pane 
     }
-    full_tab name="Terminal" cwd="/home/changfeng/workspace/shuimu" {
-        pane 
-    }
-    full_tab name="Remote" {
+    full_tab name="Build" cwd="/home/changfeng/workspace/shuimu" {
         pane split_direction="vertical" {
-            pane focus=true
-            pane size="30%"
+            pane
+            pane
+        }
+    }
+    full_tab name="Test" cwd="/home/changfeng/workspace/shuimu" {
+        pane split_direction="vertical" {
+            pane {
+                pane
+                pane
+            }
+            pane {
+                pane
+                pane
+            }
+        }
+    }
+    full_tab name="Docker" cwd="/home/changfeng/workspace/shuimu" {
+        pane 
+    }
+    full_tab name="Remote" cwd="/home/changfeng/workspace/shuimu" {
+        pane 
+    }
+    full_tab name="Files" cwd="/home/changfeng/workspace/shuimu" {
+        pane focus=true {
+            command "joshuto"
         }
     }
     full_tab name="Performance" {
